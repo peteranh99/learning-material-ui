@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -7,6 +7,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { FavoriteBorderOutlined } from '@material-ui/icons';
+import { Box } from '@material-ui/core';
 
 export default function Book(props) {
     return (
@@ -26,9 +28,15 @@ export default function Book(props) {
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    Buy
+                    <Box mx={1}>
+                        <FavoriteBorderOutlined></FavoriteBorderOutlined>
+                    </Box>
+                     Buy
                 </Button>
                 <Button size="small" color="primary">
+                    <Box mx={1}>
+                        <AddShoppingCartIcon></AddShoppingCartIcon>
+                    </Box>
                     Add to cart
                 </Button>
             </CardActions>
